@@ -57,7 +57,7 @@ io.on('connection', (socket) => {
 
 // إذا لم يتم العثور على أي مسار، أرسل ملف index.html من React
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'client', 'index.html'));
+  res.sendFile(path.join(__dirname, 'client','dist', 'index.html'));
 });
 
 server.listen(PORT, () => {
