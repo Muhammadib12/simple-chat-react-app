@@ -21,7 +21,7 @@ app.use(cors());
 
 // خدمة الملفات الثابتة من React
 const __dirname = path.resolve();
-app.use(express.static(path.join(__dirname, 'client/build')));
+app.use(express.static(path.join(__dirname, 'client/dist')));
 
 // نقطة النهاية للـ API
 io.on('connection', (socket) => {
