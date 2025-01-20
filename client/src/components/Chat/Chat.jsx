@@ -19,7 +19,7 @@ function Chat() {
     const [room, setRoom] = useState('');
     const [message,setMessage] = useState('');
     const [messages,setMessages] = useState([]);
-    const ENDPOIN = `http://localhost:${PORT}`;
+    const ENDPOIN = "https://simple-chat-react-app.onrender.com";
   useEffect(() => {
       const {name,room} = queryString.parse(location.search);
 
