@@ -8,16 +8,18 @@ import Input from '../Input/Input.jsx';
 import Messages from '../../components/Messages/Messages.jsx';
 let socket;
 
-import './Chat.css'
-
+import './Chat.css';
 
 function Chat() {
+
+  const PORT = process.env.PORT;
+
   const location = useLocation();
     const [name, setName] = useState('');
     const [room, setRoom] = useState('');
     const [message,setMessage] = useState('');
     const [messages,setMessages] = useState([]);
-    const ENDPOIN = "http://localhost:3000";
+    const ENDPOIN = `http://localhost:${PORT}`;
   useEffect(() => {
       const {name,room} = queryString.parse(location.search);
 
